@@ -1,0 +1,446 @@
+/* =====================================
+   MI OFRENDA - DIA DE MUERTOS
+   Diseño elegante y mexicano
+===================================== */
+
+:root {
+    --vino: #641d32;
+    --vino-oscuro: #2b101d;
+    --vino-claro: #8c3549;
+    --dorado: #e6bd70;
+    --naranja: #dc8034;
+    --crema: #fff8ed;
+    --texto: #49342e;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: var(--crema);
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+/* PORTADA */
+
+.portada {
+    min-height: 650px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background:
+        radial-gradient(circle at 15% 20%, #a34e37 0, transparent 28%),
+        radial-gradient(circle at 85% 75%, #87394a 0, transparent 30%),
+        linear-gradient(135deg, #200d19, #50182e 55%, #29101d);
+}
+
+.portada::before,
+.portada::after {
+    content: "✿";
+    position: absolute;
+    color: rgba(230, 189, 112, .15);
+    font-size: 180px;
+    pointer-events: none;
+}
+
+.portada::before {
+    top: 80px;
+    left: 25px;
+}
+
+.portada::after {
+    right: 25px;
+    bottom: 15px;
+}
+
+.navegacion {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 8%;
+    border-bottom: 1px solid rgba(255,255,255,.13);
+    background: rgba(20, 5, 13, .22);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: var(--dorado);
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navegacion div {
+    display: flex;
+    gap: 30px;
+}
+
+.navegacion div a {
+    color: #fff4e8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.navegacion div a:hover {
+    color: var(--dorado);
+}
+
+.portada-contenido {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: auto;
+    padding: 120px 25px 130px;
+    text-align: center;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--naranja);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.portada h1 {
+    color: #fff8ed;
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+    text-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+
+.portada-contenido p {
+    max-width: 650px;
+    margin: auto;
+    color: #ead6ca;
+    font-size: 17px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 32px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #e6bd70, #d98539);
+    color: #35121f;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    transition: .3s;
+}
+
+.boton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.3);
+}
+
+/* SECCIONES GENERALES */
+
+.seccion {
+    padding: 95px 8%;
+    text-align: center;
+}
+
+h2 {
+    color: var(--vino);
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.3;
+    margin: 12px 0 22px;
+}
+
+.bienvenida {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.bienvenida p {
+    max-width: 800px;
+    margin: auto;
+    color: #78665c;
+    font-size: 16px;
+}
+
+/* GALERIA */
+
+.recuerdos {
+    background:
+        radial-gradient(circle at 10% 20%, #fff0db, transparent 30%),
+        #f2e5d9;
+    border-top: 1px solid #ead7c5;
+    border-bottom: 1px solid #ead7c5;
+}
+
+.recuerdos > p {
+    color: #78665c;
+}
+
+.visor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    max-width: 950px;
+    margin: 45px auto 25px;
+}
+
+.marco-foto {
+    width: min(650px, 80%);
+    padding: 17px;
+    background: white;
+    border: 1px solid #e9d5bc;
+    border-radius: 20px;
+    box-shadow: 0 18px 45px rgba(76, 35, 35, .14);
+    transition: .3s;
+}
+
+.marco-foto img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 13px;
+    background: #ead9ca;
+}
+
+#mensaje-foto {
+    padding: 23px 12px 8px;
+    color: var(--vino);
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+}
+
+.flecha {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--dorado);
+    border-radius: 50%;
+    background: var(--vino);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.flecha:hover {
+    background: var(--naranja);
+    transform: scale(1.1);
+}
+
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 28px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: #c9aa94;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.indicador.activo {
+    background: var(--vino);
+    transform: scale(1.4);
+}
+
+/* TARJETAS DE TRADICION */
+
+.tradicion {
+    background: var(--crema);
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.tarjeta {
+    position: relative;
+    overflow: hidden;
+    padding: 35px 23px;
+    background: white;
+    border: 1px solid #edddca;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(68, 31, 30, .07);
+    transition: .35s;
+}
+
+.tarjeta::before {
+    content: "";
+    display: block;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, var(--vino), var(--naranja), var(--dorado));
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(68, 31, 30, .13);
+}
+
+.tarjeta div {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: var(--vino);
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 13px;
+}
+
+.tarjeta p {
+    color: #78665c;
+    font-size: 14px;
+}
+
+/* DESPEDIDA */
+
+.despedida {
+    position: relative;
+    overflow: hidden;
+    padding: 95px 20px;
+    text-align: center;
+    color: white;
+    background:
+        radial-gradient(circle at 50% 0%, #743248, transparent 55%),
+        var(--vino-oscuro);
+}
+
+.despedida div {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.despedida h2 {
+    color: var(--dorado);
+    font-size: clamp(30px, 5vw, 46px);
+}
+
+.despedida p {
+    color: #ead6ca;
+    margin-top: 15px;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    padding: 25px 15px;
+    text-align: center;
+    background: #190912;
+    color: #e9d4c1;
+    font-size: 13px;
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portada-contenido,
+.tarjeta,
+.marco-foto {
+    animation: aparecer .8s ease both;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seccion {
+        padding: 75px 5%;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    .navegacion {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navegacion div {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portada-contenido {
+        padding: 90px 20px;
+    }
+
+    .visor {
+        gap: 7px;
+    }
+
+    .flecha {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .marco-foto {
+        width: 78%;
+        padding: 9px;
+    }
+
+    .marco-foto img {
+        height: 240px;
+    }
+
+    #mensaje-foto {
+        font-size: 16px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 65px 20px;
+    }
+}

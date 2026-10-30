@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Ofrenda | Día de Muertos</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='estilos.css') }}">
+
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+
+<body>
+
+<header class="portada" id="inicio">
+    <nav class="navegacion">
+        <a href="#inicio" class="logo">🌼 Mi Ofrenda</a>
+        <div>
+            <a href="#bienvenida">Inicio</a>
+            <a href="#recuerdos">Recuerdos</a>
+            <a href="#tradicion">Tradición</a>
+        </div>
+    </nav>
+
+    <div class="portada-contenido">
+        <span class="etiqueta">DÍA DE MUERTOS · TRADICIÓN MEXICANA</span>
+        <h1>Una luz que nunca<br>deja de brillar</h1>
+        <p>Recordar es volver a sentir. Celebramos la vida de quienes siguen presentes en nuestro corazón.</p>
+        <a href="#recuerdos" class="boton">Ver nuestros recuerdos ↓</a>
+    </div>
+</header>
+
+<main>
+
+<section class="bienvenida seccion" id="bienvenida">
+    <span class="etiqueta">CON AMOR, SIEMPRE</span>
+    <h2>Un lugar para recordar</h2>
+    <p>
+        “Hay recuerdos que ni el tiempo puede borrar, 
+        amores que trascienden la eternidad
+         y almas que nunca dejan de vivir en nuestro corazón. 
+         Hoy, entre flores de cempasúchil, velas y recuerdos,
+          abrimos las puertas de nuestra ofrenda para recibir con amor
+           a quienes siempre estarán presentes.” 🧡🕯️
+    </p>
+</section>
+
+<section class="recuerdos seccion" id="recuerdos">
+    <span class="etiqueta">GALERÍA DE RECUERDOS</span>
+    <h2>Siempre presentes</h2>
+    <p>Cada imagen conserva un momento especial.</p>
+
+    <div class="visor">
+        <button id="anterior" class="flecha" type="button">❮</button>
+
+        <div class="marco-foto">
+            <img id="foto-ofrenda"
+                 src="{{ url_for('static', filename='img/foto1.jpg') }}"
+                 alt="Fotografía de la ofrenda">
+            <p id="mensaje-foto"></p>
+        </div>
+
+        <button id="siguiente" class="flecha" type="button">❯</button>
+    </div>
+
+    <div id="indicadores" class="indicadores"></div>
+</section>
+
+<section class="seccion tradicion" id="tradicion">
+    <span class="etiqueta">NUESTRAS TRADICIONES</span>
+    <h2>El significado de la ofrenda</h2>
+
+    <div class="tarjetas">
+        <article class="tarjeta">
+            <div>🌼</div>
+            <h3>Flor de cempasúchil</h3>
+            <p>
+Con su color brillante y su aroma especial,
+ la flor de cempasúchil ilumina el camino de nuestros seres queridos 
+ para regresar a casa. Cada pétalo representa un recuerdo,
+  una muestra de amor y la esperanza de volver a sentir cerca
+   a quienes nunca olvidaremos. </p>
+        </article>
+
+        <article class="tarjeta">
+            <div>🕯️</div>
+            <h3>Las velas</h3>
+            <p>Una luz q nunca se apaga que guia a nuestros seres queridos 
+                de regreso a casa. su brillo simboliza la esperanza, el amor y
+                el recuerdo de quienes siguem vivos en  nuestros corazones.por que su luz
+                siempre permanezera con nosotros. 
+            </p>
+        </article>
+
+        <article class="tarjeta">
+            <div>💧</div>
+            <h3>El agua</h3>
+            <p>Simbolo de vida y pureza
+                 El agua representa la vida, la pureza y el descanso.
+                  Se coloca en la ofrenda para recibir a nuestros seres queridos
+                   y ofrecerles un momento de tranquilidad después de su viaje. 
+                   Es un símbolo de cariño que nos recuerda que siempre tendrán
+                    un lugar en nuestro hogar y en nuestro corazón..</p>
+        </article>
+
+        <article class="tarjeta">
+            <div>🥖</div>
+            <h3>Pan de muerto</h3>
+            <p>Representa el cariño, la unión y 
+                el recuerdo de nuestros seres queridos. 
+                Se coloca como una ofrenda para recibirlos
+                 y compartir con ellos.</p>
+        </article>
+    </div>
+</section>
+
+<section class="despedida">
+    <div>🌼</div>
+    <h2>Mientras exista el recuerdo,<br>nadie se va por completo.</h2>
+    <p>🕯️ Hasta que nos volvamos a encontrar…
+
+Hoy cerramos las puertas de nuestra ofrenda, pero nunca las de nuestro corazón. Las flores se marchitarán, las velas se apagarán y los días seguirán pasando, pero los recuerdos de quienes amamos permanecerán vivos para siempre.
+
+Porque la muerte no puede borrar una historia, ni el tiempo desaparecer el amor que nos dejaron. Mientras exista alguien que los recuerde, seguirán viviendo en cada sonrisa, en cada enseñanza y en cada latido de nuestro corazón.
+
+No es un adiós, es un hasta pronto. Porque quienes amamos nunca se van del todo. 🧡🌼</p>
+</section>
+
+</main>
+
+<footer>
+    Mi Ofrenda · Celebrando nuestras tradiciones mexicanas 🏵️
+</footer>
+
+</body>
+</html>
